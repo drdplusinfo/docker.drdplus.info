@@ -24,6 +24,101 @@ services:
       - default
       - proxy
 
+  hranicar:
+    build: .
+    container_name: hranicar.drdplus.loc
+    volumes:
+      - ./docker/var/www/hranicar:/var/www/html:delegated
+    labels:
+      - "traefik.frontend.rule=HostRegexp:hranicar.drdplus.loc"
+      - "traefik.docker.network=docker-www"
+    networks:
+      - default
+      - proxy
+
+  carodej:
+    build: .
+    container_name: carodej.drdplus.loc
+    volumes:
+      - ./docker/var/www/carodej:/var/www/html:delegated
+    labels:
+      - "traefik.frontend.rule=HostRegexp:carodej.drdplus.loc"
+      - "traefik.docker.network=docker-www"
+    networks:
+      - default
+      - proxy
+
+  theurg:
+    build: .
+    container_name: theurg.drdplus.loc
+    volumes:
+      - ./docker/var/www/theurg:/var/www/html:delegated
+    labels:
+      - "traefik.frontend.rule=HostRegexp:theurg.drdplus.loc"
+      - "traefik.docker.network=docker-www"
+    networks:
+      - default
+      - proxy
+
+  zlodej:
+    build: .
+    container_name: zlodej.drdplus.loc
+    volumes:
+      - ./docker/var/www/zlodej:/var/www/html:delegated
+    labels:
+      - "traefik.frontend.rule=HostRegexp:zlodej.drdplus.loc"
+      - "traefik.docker.network=docker-www"
+    networks:
+      - default
+      - proxy
+
+  bojovnik:
+    build: .
+    container_name: bojovnik.drdplus.loc
+    volumes:
+      - ./docker/var/www/bojovnik:/var/www/html:delegated
+    labels:
+      - "traefik.frontend.rule=HostRegexp:bojovnik.drdplus.loc"
+      - "traefik.docker.network=docker-www"
+    networks:
+      - default
+      - proxy
+
+  ppj:
+    build: .
+    container_name: ppj.drdplus.loc
+    volumes:
+      - ./docker/var/www/ppj:/var/www/html:delegated
+    labels:
+      - "traefik.frontend.rule=HostRegexp:ppj.drdplus.loc"
+      - "traefik.docker.network=docker-www"
+    networks:
+      - default
+      - proxy
+
+  index:
+    build: .
+    container_name: www.drdplus.loc
+    volumes:
+      - ./docker/var/www/index:/var/www/html:delegated
+    labels:
+      - "traefik.frontend.rule=HostRegexp:www.drdplus.loc,drdplus.loc"
+      - "traefik.docker.network=docker-www"
+    networks:
+      - default
+      - proxy
+
+  rules.skeleton:
+    build: .
+    container_name: rules.skeleton.drdplus.loc
+    volumes:
+      - ./docker/var/www/rules.skeleton:/var/www/html:delegated
+    labels:
+      - "traefik.frontend.rule=HostRegexp:rules.skeleton.drdplus.loc"
+      - "traefik.docker.network=docker-www"
+    networks:
+      - default
+      - proxy
 
 networks:
   proxy:
