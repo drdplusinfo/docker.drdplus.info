@@ -1,0 +1,31 @@
+version: "3"
+services:
+  blog:
+    build: .
+    container_name: blog.drdplus.loc
+    volumes:
+      - ./docker/var/www/blog:/var/www/html:delegated
+    labels:
+      - "traefik.frontend.rule=HostRegexp:blog.drdplus.loc"
+      - "traefik.docker.network=docker-www"
+    networks:
+      - default
+      - proxy
+
+  pph:
+    build: .
+    container_name: pph.drdplus.loc
+    volumes:
+      - ./docker/var/www/pph:/var/www/html:delegated
+    labels:
+      - "traefik.frontend.rule=HostRegexp:pph.drdplus.loc"
+      - "traefik.docker.network=docker-www"
+    networks:
+      - default
+      - proxy
+
+
+networks:
+  proxy:
+    external:
+      name: docker-www
