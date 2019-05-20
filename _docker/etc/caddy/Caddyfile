@@ -1,0 +1,309 @@
+http://bestiar.drdplus.loc:2015 {
+    tls mail@jaroslavtyc.com
+    gzip
+    fastcgi / 127.0.0.1:9000 php {
+        ext   .php
+        split .php
+        index index.php
+    }
+    root /var/www/bestiar
+    log /var/log/caddy
+}
+
+http://bestiar.ppj.drdplus.loc:2015 {
+    tls mail@jaroslavtyc.com
+    gzip
+    fastcgi / 127.0.0.1:9000 php {
+        ext   .php
+        split .php
+        index index.php
+    }
+    root /var/www/bestiar.ppj
+    log /var/log/caddy
+}
+
+http://boj.drdplus.loc:2015 {
+    tls mail@jaroslavtyc.com
+    gzip
+    fastcgi / 127.0.0.1:9000 php {
+        ext   .php
+        split .php
+        index index.php
+    }
+    root /var/www/boj
+    log /var/log/caddy
+}
+
+http://bojovnik.drdplus.loc:2015 {
+    tls mail@jaroslavtyc.com
+    gzip
+    fastcgi / 127.0.0.1:9000 php {
+        ext   .php
+        split .php
+        index index.php
+    }
+    root /var/www/bojovnik
+    log /var/log/caddy
+}
+
+http://carodej.drdplus.loc:2015 {
+    tls mail@jaroslavtyc.com
+    gzip
+    fastcgi / 127.0.0.1:9000 php {
+        ext   .php
+        split .php
+        index index.php
+    }
+    root /var/www/carodej
+    log /var/log/caddy
+}
+
+http://demon.theurg.drdplus.loc:2015 {
+    tls mail@jaroslavtyc.com
+    gzip
+    fastcgi / 127.0.0.1:9000 php {
+        ext   .php
+        split .php
+        index index.php
+    }
+    root /var/www/demon.theurg
+    log /var/log/caddy
+}
+
+http://dobrodruzstvi.ppj.drdplus.loc:2015 {
+    tls mail@jaroslavtyc.com
+    gzip
+    fastcgi / 127.0.0.1:9000 php {
+        ext   .php
+        split .php
+        index index.php
+    }
+    root /var/www/dobrodruzstvi.ppj
+    log /var/log/caddy
+}
+
+http://format.drdplus.loc:2015 {
+    tls mail@jaroslavtyc.com
+    gzip
+    fastcgi / 127.0.0.1:9000 php {
+        ext   .php
+        split .php
+        index index.php
+    }
+    root /var/www/format
+    log /var/log/caddy
+}
+
+http://formule.theurg.loc:2015 {
+    tls mail@jaroslavtyc.com
+    gzip
+    fastcgi / 127.0.0.1:9000 php {
+        ext   .php
+        split .php
+        index index.php
+    }
+    root /var/www/formule.theurg
+    log /var/log/caddy
+}
+
+http://hranicar.loc:2015 {
+    tls mail@jaroslavtyc.com
+    gzip
+    fastcgi / 127.0.0.1:9000 php {
+        ext   .php
+        split .php
+        index index.php
+    }
+    root /var/www/hranicar
+    log /var/log/caddy
+}
+
+http://drdplus.loc:2015, http://www.drdplus.loc:2015 {
+    tls mail@jaroslavtyc.com
+    gzip
+    fastcgi / 127.0.0.1:9000 php {
+        ext   .php
+        split .php
+        index index.php
+    }
+    root /var/www/index
+    log /var/log/caddy
+}
+
+http://kalkulator.skeleton.loc:2015 {
+    tls mail@jaroslavtyc.com
+    gzip
+    fastcgi / 127.0.0.1:9000 php {
+        ext   .php
+        split .php
+        index index.php
+    }
+    root /var/www/kalkulator.skeleton
+    log /var/log/caddy
+}
+
+http://knez.loc:2015 {
+    tls mail@jaroslavtyc.com
+    gzip
+    fastcgi / 127.0.0.1:9000 php {
+        ext   .php
+        split .php
+        index index.php
+    }
+    root /var/www/knez
+    log /var/log/caddy
+}
+
+http://mdwiki.blog.loc:2015 {
+    tls mail@jaroslavtyc.com
+    gzip
+    fastcgi / 127.0.0.1:9000 php {
+        ext   .php
+        split .php
+        index index.php
+    }
+    root /var/www/mdwiki.blog
+    log /var/log/caddy
+}
+
+http://niceni.loc:2015 {
+    tls mail@jaroslavtyc.com
+    gzip
+    fastcgi / 127.0.0.1:9000 php {
+        ext   .php
+        split .php
+        index index.php
+    }
+    root /var/www/niceni
+    log /var/log/caddy
+}
+
+http://pad.loc:2015 {
+    tls mail@jaroslavtyc.com
+    gzip
+    fastcgi / 127.0.0.1:9000 php {
+        ext   .php
+        split .php
+        index index.php
+    }
+    root /var/www/pad
+    log /var/log/caddy
+}
+
+http://pph.loc:2015 {
+    tls mail@jaroslavtyc.com
+    gzip
+    fastcgi / 127.0.0.1:9000 php {
+        ext   .php
+        split .php
+        index index.php
+    }
+    root /var/www/pph
+    log /var/log/caddy
+}
+
+http://ppj.loc:2015 {
+    tls mail@jaroslavtyc.com
+    gzip
+    fastcgi / 127.0.0.1:9000 php {
+        ext   .php
+        split .php
+        index index.php
+    }
+    root /var/www/ppj
+    log /var/log/caddy
+}
+
+http://pribeh.loc:2015 {
+    tls mail@jaroslavtyc.com
+    gzip
+    fastcgi / 127.0.0.1:9000 php {
+        ext   .php
+        split .php
+        index index.php
+    }
+    root /var/www/pribeh
+    log /var/log/caddy
+}
+
+http://pribeh.bestiar.loc:2015 {
+    tls mail@jaroslavtyc.com
+    gzip
+    fastcgi / 127.0.0.1:9000 php {
+        ext   .php
+        split .php
+        index index.php
+    }
+    root /var/www/pribeh.bestiar
+    log /var/log/caddy
+}
+
+http://rules.skeleton.loc:2015 {
+    tls mail@jaroslavtyc.com
+    gzip
+    fastcgi / 127.0.0.1:9000 php {
+        ext   .php
+        split .php
+        index index.php
+    }
+    root /var/www/rules.skeleton
+    log /var/log/caddy
+}
+
+http://theurg.loc:2015 {
+    tls mail@jaroslavtyc.com
+    gzip
+    fastcgi / 127.0.0.1:9000 php {
+        ext   .php
+        split .php
+        index index.php
+    }
+    root /var/www/theurg
+    log /var/log/caddy
+}
+
+http://utok.skeleton.loc:2015 {
+    tls mail@jaroslavtyc.com
+    gzip
+    fastcgi / 127.0.0.1:9000 php {
+        ext   .php
+        split .php
+        index index.php
+    }
+    root /var/www/utok.skeleton
+    log /var/log/caddy
+}
+
+http://zlodej.loc:2015 {
+    tls mail@jaroslavtyc.com
+    gzip
+    fastcgi / 127.0.0.1:9000 php {
+        ext   .php
+        split .php
+        index index.php
+    }
+    root /var/www/zlodej
+    log /var/log/caddy
+}
+
+http://blog.drdplus.loc:2015 {
+    tls mail@jaroslavtyc.com
+    gzip
+    root /var/www/blog/output
+    log /var/log/caddy
+    errors {
+        404 404.html
+    }
+}
+
+http://update.blog.drdplus.loc:2015 {
+    tls mail@jaroslavtyc.com
+    gzip
+    fastcgi / 127.0.0.1:9000 php {
+        ext   .php
+        split .php
+        index index.php
+    }
+    root /var/www/blog
+    log /var/log/caddy
+}

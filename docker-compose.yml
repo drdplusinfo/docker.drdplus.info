@@ -1,133 +1,17 @@
 version: "3"
 services:
-    blog:
+  drdplus.loc:
     build: .
-    container_name: blog.drdplus.loc
+    environment:
+      PHP_IDE_CONFIG: "serverName=drdplus.loc"
     volumes:
-      - ./docker/var/www/blog:/var/www/html:delegated
+      - ./www:/var/www:delegated
+    command: /bin/bash -c 'cd /var/www/update.blog && sudo -u www-data npm install && sudo -u www-data /docker.sh'
     labels:
-      - "traefik.frontend.rule=Host:blog.drdplus.loc"
+      - "traefik.backend=drdplus.loc"
+      - "traefik.frontend.rule=HostRegexp: {subdomain:([[:alnum:]]+[.])+}drdplus.loc"
       - "traefik.docker.network=docker-www"
-    networks:
-      - default
-      - proxy
-
-  pph:
-    build: .
-    container_name: pph.drdplus.loc
-    volumes:
-      - ./docker/var/www/pph:/var/www/html:delegated
-    labels:
-      - "traefik.frontend.rule=Host:pph.drdplus.loc"
-      - "traefik.docker.network=docker-www"
-    networks:
-      - default
-      - proxy
-
-  hranicar:
-    build: .
-    container_name: hranicar.drdplus.loc
-    volumes:
-      - ./docker/var/www/hranicar:/var/www/html:delegated
-    labels:
-      - "traefik.frontend.rule=Host:hranicar.drdplus.loc"
-      - "traefik.docker.network=docker-www"
-    networks:
-      - default
-      - proxy
-
-  carodej:
-    build: .
-    container_name: carodej.drdplus.loc
-    volumes:
-      - ./docker/var/www/carodej:/var/www/html:delegated
-    labels:
-      - "traefik.frontend.rule=Host:carodej.drdplus.loc"
-      - "traefik.docker.network=docker-www"
-    networks:
-      - default
-      - proxy
-
-  theurg:
-    build: .
-    container_name: theurg.drdplus.loc
-    volumes:
-      - ./docker/var/www/theurg:/var/www/html:delegated
-    labels:
-      - "traefik.frontend.rule=Host:theurg.drdplus.loc"
-      - "traefik.docker.network=docker-www"
-    networks:
-      - default
-      - proxy
-
-  zlodej:
-    build: .
-    container_name: zlodej.drdplus.loc
-    volumes:
-      - ./docker/var/www/zlodej:/var/www/html:delegated
-    labels:
-      - "traefik.frontend.rule=Host:zlodej.drdplus.loc"
-      - "traefik.docker.network=docker-www"
-    networks:
-      - default
-      - proxy
-
-  bojovnik:
-    build: .
-    container_name: bojovnik.drdplus.loc
-    volumes:
-      - ./docker/var/www/bojovnik:/var/www/html:delegated
-    labels:
-      - "traefik.frontend.rule=Host:bojovnik.drdplus.loc"
-      - "traefik.docker.network=docker-www"
-    networks:
-      - default
-      - proxy
-
-  ppj:
-    build: .
-    container_name: ppj.drdplus.loc
-    volumes:
-      - ./docker/var/www/ppj:/var/www/html:delegated
-    labels:
-      - "traefik.frontend.rule=Host:ppj.drdplus.loc"
-      - "traefik.docker.network=docker-www"
-    networks:
-      - default
-      - proxy
-
-  index:
-    build: .
-    container_name: www.drdplus.loc
-    volumes:
-      - ./docker/var/www/index:/var/www/html:delegated
-    labels:
-      - "traefik.frontend.rule=Host:www.drdplus.loc,drdplus.loc"
-      - "traefik.docker.network=docker-www"
-    networks:
-      - default
-      - proxy
-
-  rules.skeleton:
-    build: .
-    container_name: rules.skeleton.drdplus.loc
-    volumes:
-      - ./docker/var/www/rules.skeleton:/var/www/html:delegated
-    labels:
-      - "traefik.frontend.rule=Host:rules.skeleton.drdplus.loc"
-      - "traefik.docker.network=docker-www"
-    networks:
-      - default
-      - proxy
-
-  demon.theurg:
-    build: .
-    container_name: demon.theurg.drdplus.loc
-    volumes:
-      - ./docker/var/www/demon.theurg:/var/www/html:delegated
-    labels:
-      - "traefik.frontend.rule=Host:demon.theurg.drdplus.loc"
-      - "traefik.docker.network=docker-www"
+      - "traefik.port=2015"
     networks:
       - default
       - proxy
