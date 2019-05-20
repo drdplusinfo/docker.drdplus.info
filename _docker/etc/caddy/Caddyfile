@@ -1,4 +1,4 @@
-http://bestiar.drdplus.loc:2015 {
+http://bestiar.drdplus.loc {
     tls mail@jaroslavtyc.com
     gzip
     fastcgi / 127.0.0.1:9000 php {
@@ -10,7 +10,7 @@ http://bestiar.drdplus.loc:2015 {
     log /var/log/caddy
 }
 
-http://bestiar.ppj.drdplus.loc:2015 {
+http://bestiar.ppj.drdplus.loc {
     tls mail@jaroslavtyc.com
     gzip
     fastcgi / 127.0.0.1:9000 php {
@@ -22,7 +22,7 @@ http://bestiar.ppj.drdplus.loc:2015 {
     log /var/log/caddy
 }
 
-http://boj.drdplus.loc:2015 {
+http://boj.drdplus.loc {
     tls mail@jaroslavtyc.com
     gzip
     fastcgi / 127.0.0.1:9000 php {
@@ -34,7 +34,7 @@ http://boj.drdplus.loc:2015 {
     log /var/log/caddy
 }
 
-http://bojovnik.drdplus.loc:2015 {
+http://bojovnik.drdplus.loc {
     tls mail@jaroslavtyc.com
     gzip
     fastcgi / 127.0.0.1:9000 php {
@@ -46,7 +46,7 @@ http://bojovnik.drdplus.loc:2015 {
     log /var/log/caddy
 }
 
-http://carodej.drdplus.loc:2015 {
+http://carodej.drdplus.loc {
     tls mail@jaroslavtyc.com
     gzip
     fastcgi / 127.0.0.1:9000 php {
@@ -58,7 +58,7 @@ http://carodej.drdplus.loc:2015 {
     log /var/log/caddy
 }
 
-http://demon.theurg.drdplus.loc:2015 {
+http://demon.theurg.drdplus.loc {
     tls mail@jaroslavtyc.com
     gzip
     fastcgi / 127.0.0.1:9000 php {
@@ -70,7 +70,7 @@ http://demon.theurg.drdplus.loc:2015 {
     log /var/log/caddy
 }
 
-http://dobrodruzstvi.ppj.drdplus.loc:2015 {
+http://dobrodruzstvi.ppj.drdplus.loc {
     tls mail@jaroslavtyc.com
     gzip
     fastcgi / 127.0.0.1:9000 php {
@@ -82,7 +82,7 @@ http://dobrodruzstvi.ppj.drdplus.loc:2015 {
     log /var/log/caddy
 }
 
-http://format.drdplus.loc:2015 {
+http://format.drdplus.drdplus.loc {
     tls mail@jaroslavtyc.com
     gzip
     fastcgi / 127.0.0.1:9000 php {
@@ -94,7 +94,7 @@ http://format.drdplus.loc:2015 {
     log /var/log/caddy
 }
 
-http://formule.theurg.loc:2015 {
+http://formule.theurg.drdplus.loc {
     tls mail@jaroslavtyc.com
     gzip
     fastcgi / 127.0.0.1:9000 php {
@@ -106,7 +106,7 @@ http://formule.theurg.loc:2015 {
     log /var/log/caddy
 }
 
-http://hranicar.loc:2015 {
+http://hranicar.drdplus.loc {
     tls mail@jaroslavtyc.com
     gzip
     fastcgi / 127.0.0.1:9000 php {
@@ -118,7 +118,11 @@ http://hranicar.loc:2015 {
     log /var/log/caddy
 }
 
-http://drdplus.loc:2015, http://www.drdplus.loc:2015 {
+http://drdplus.loc {
+	redir 301 http://www.drdplus.loc
+}
+
+http://www.drdplus.loc {
     tls mail@jaroslavtyc.com
     gzip
     fastcgi / 127.0.0.1:9000 php {
@@ -130,7 +134,7 @@ http://drdplus.loc:2015, http://www.drdplus.loc:2015 {
     log /var/log/caddy
 }
 
-http://kalkulator.skeleton.loc:2015 {
+http://kalkulator.skeleton.loc {
     tls mail@jaroslavtyc.com
     gzip
     fastcgi / 127.0.0.1:9000 php {
@@ -142,7 +146,7 @@ http://kalkulator.skeleton.loc:2015 {
     log /var/log/caddy
 }
 
-http://knez.loc:2015 {
+http://knez.drdplus.loc {
     tls mail@jaroslavtyc.com
     gzip
     fastcgi / 127.0.0.1:9000 php {
@@ -154,19 +158,7 @@ http://knez.loc:2015 {
     log /var/log/caddy
 }
 
-http://mdwiki.blog.loc:2015 {
-    tls mail@jaroslavtyc.com
-    gzip
-    fastcgi / 127.0.0.1:9000 php {
-        ext   .php
-        split .php
-        index index.php
-    }
-    root /var/www/mdwiki.blog
-    log /var/log/caddy
-}
-
-http://niceni.loc:2015 {
+http://niceni.drdplus.loc {
     tls mail@jaroslavtyc.com
     gzip
     fastcgi / 127.0.0.1:9000 php {
@@ -178,7 +170,7 @@ http://niceni.loc:2015 {
     log /var/log/caddy
 }
 
-http://pad.loc:2015 {
+http://pad.drdplus.loc {
     tls mail@jaroslavtyc.com
     gzip
     fastcgi / 127.0.0.1:9000 php {
@@ -190,7 +182,7 @@ http://pad.loc:2015 {
     log /var/log/caddy
 }
 
-http://pph.loc:2015 {
+http://pph.drdplus.loc {
     tls mail@jaroslavtyc.com
     gzip
     fastcgi / 127.0.0.1:9000 php {
@@ -202,7 +194,7 @@ http://pph.loc:2015 {
     log /var/log/caddy
 }
 
-http://ppj.loc:2015 {
+http://ppj.drdplus.loc {
     tls mail@jaroslavtyc.com
     gzip
     fastcgi / 127.0.0.1:9000 php {
@@ -214,7 +206,7 @@ http://ppj.loc:2015 {
     log /var/log/caddy
 }
 
-http://pribeh.loc:2015 {
+http://pribeh.drdplus.loc {
     tls mail@jaroslavtyc.com
     gzip
     fastcgi / 127.0.0.1:9000 php {
@@ -226,7 +218,7 @@ http://pribeh.loc:2015 {
     log /var/log/caddy
 }
 
-http://pribeh.bestiar.loc:2015 {
+http://pribeh.bestiar.drdplus.loc {
     tls mail@jaroslavtyc.com
     gzip
     fastcgi / 127.0.0.1:9000 php {
@@ -238,7 +230,7 @@ http://pribeh.bestiar.loc:2015 {
     log /var/log/caddy
 }
 
-http://rules.skeleton.loc:2015 {
+http://rules.skeleton.loc {
     tls mail@jaroslavtyc.com
     gzip
     fastcgi / 127.0.0.1:9000 php {
@@ -250,7 +242,7 @@ http://rules.skeleton.loc:2015 {
     log /var/log/caddy
 }
 
-http://theurg.loc:2015 {
+http://theurg.drdplus.loc {
     tls mail@jaroslavtyc.com
     gzip
     fastcgi / 127.0.0.1:9000 php {
@@ -262,7 +254,7 @@ http://theurg.loc:2015 {
     log /var/log/caddy
 }
 
-http://utok.skeleton.loc:2015 {
+http://utok.skeleton.drdplus.loc {
     tls mail@jaroslavtyc.com
     gzip
     fastcgi / 127.0.0.1:9000 php {
@@ -274,7 +266,7 @@ http://utok.skeleton.loc:2015 {
     log /var/log/caddy
 }
 
-http://zlodej.loc:2015 {
+http://zlodej.drdplus.loc {
     tls mail@jaroslavtyc.com
     gzip
     fastcgi / 127.0.0.1:9000 php {
@@ -286,7 +278,7 @@ http://zlodej.loc:2015 {
     log /var/log/caddy
 }
 
-http://blog.drdplus.loc:2015 {
+http://blog.drdplus.loc {
     tls mail@jaroslavtyc.com
     gzip
     root /var/www/blog/output
@@ -296,7 +288,7 @@ http://blog.drdplus.loc:2015 {
     }
 }
 
-http://update.blog.drdplus.loc:2015 {
+http://update.blog.drdplus.loc {
     tls mail@jaroslavtyc.com
     gzip
     fastcgi / 127.0.0.1:9000 php {
@@ -305,5 +297,17 @@ http://update.blog.drdplus.loc:2015 {
         index index.php
     }
     root /var/www/blog
+    log /var/log/caddy
+}
+
+http://mdwiki.blog.drdplus.loc {
+    tls mail@jaroslavtyc.com
+    gzip
+    fastcgi / 127.0.0.1:9000 php {
+        ext   .php
+        split .php
+        index index.php
+    }
+    root /var/www/mdwiki.blog
     log /var/log/caddy
 }

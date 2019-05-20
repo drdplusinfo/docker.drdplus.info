@@ -6,12 +6,12 @@ services:
       PHP_IDE_CONFIG: "serverName=drdplus.loc"
     volumes:
       - ./www:/var/www:delegated
-    command: /bin/bash -c 'cd /var/www/update.blog && sudo -u www-data npm install && sudo -u www-data /docker.sh'
+    command: /bin/bash -c 'cd /var/www/blog && sudo -u www-data npm install && /docker.sh'
     labels:
       - "traefik.backend=drdplus.loc"
-      - "traefik.frontend.rule=HostRegexp: {subdomain:([[:alnum:]]+[.])+}drdplus.loc"
+      - "traefik.frontend.rule=HostRegexp: drdplus.loc, {subdomain:([[:alnum:]]+[.]+}drdplus.loc"
       - "traefik.docker.network=docker-www"
-      - "traefik.port=2015"
+      - "traefik.port=80"
     networks:
       - default
       - proxy
