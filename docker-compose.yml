@@ -9,7 +9,7 @@ services:
     command: /bin/bash -c 'cd /var/www/blog && sudo -u www-data npm install && /docker.sh'
     labels:
       - "traefik.backend=drdplus.loc"
-      - "traefik.frontend.rule=HostRegexp: drdplus.loc, {subdomain:([[:alnum:]]+[.]+}drdplus.loc"
+      - "traefik.frontend.rule=HostRegexp: drdplus.loc,{subdomain:(.+[.])+}drdplus.loc"
       - "traefik.docker.network=docker-www"
       - "traefik.port=80"
     networks:
