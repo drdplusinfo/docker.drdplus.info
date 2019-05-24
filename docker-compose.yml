@@ -6,7 +6,10 @@ services:
       PHP_IDE_CONFIG: "serverName=drdplus.loc"
     volumes:
       - ./www:/var/www:delegated
-    command: /bin/bash -c 'cd /var/www/blog && sudo -u www-data npm install && /docker.sh'
+    entrypoint:
+      - sh
+      - -c
+      - set -x && cd /var/www/blog && sudo -u www-data npm install && /bin/bash /docker.sh
     labels:
       - "traefik.backend=drdplus.loc"
       - "traefik.frontend.rule=HostRegexp: drdplus.loc,{subdomain:(.+[.])+}drdplus.loc"
