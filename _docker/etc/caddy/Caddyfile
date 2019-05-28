@@ -134,7 +134,7 @@ http://www.drdplus.loc {
     log /var/log/caddy
 }
 
-http://kalkulator.skeleton.loc {
+http://kalkulator.skeleton.drdplus.loc {
     tls mail@jaroslavtyc.com
     gzip
     fastcgi / 127.0.0.1:9000 php {
@@ -143,6 +143,18 @@ http://kalkulator.skeleton.loc {
         index index.php
     }
     root /var/www/kalkulator.skeleton
+    log /var/log/caddy
+}
+
+http://rules.skeleton.drdplus.loc {
+    tls mail@jaroslavtyc.com
+    gzip
+    fastcgi / 127.0.0.1:9000 php {
+        ext   .php
+        split .php
+        index index.php
+    }
+    root /var/www/rules.skeleton
     log /var/log/caddy
 }
 
