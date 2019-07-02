@@ -146,6 +146,10 @@ http://kalkulator.skeleton.drdplus.loc {
     log /var/log/caddy
 }
 
+http://rules.skeleton.loc {
+    redir http://rules.skeleton.drdplus.loc
+}
+
 http://rules.skeleton.drdplus.loc {
     tls mail@jaroslavtyc.com
     gzip
@@ -239,18 +243,6 @@ http://pribeh.bestiar.drdplus.loc {
         index index.php
     }
     root /var/www/pribeh.bestiar
-    log /var/log/caddy
-}
-
-http://rules.skeleton.loc {
-    tls mail@jaroslavtyc.com
-    gzip
-    fastcgi / 127.0.0.1:9000 php {
-        ext   .php
-        split .php
-        index index.php
-    }
-    root /var/www/rules.skeleton
     log /var/log/caddy
 }
 
