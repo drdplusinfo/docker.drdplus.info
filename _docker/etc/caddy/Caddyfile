@@ -134,6 +134,18 @@ http://www.drdplus.loc {
     log /var/log/caddy
 }
 
+http://inkubator.drdplus.loc {
+    tls mail@jaroslavtyc.com
+    gzip
+    fastcgi / 127.0.0.1:9000 php {
+        ext   .php
+        split .php
+        index index.php
+    }
+    root /var/www/inkubator
+    log /var/log/caddy
+}
+
 http://kalkulator.skeleton.drdplus.loc {
     tls mail@jaroslavtyc.com
     gzip
