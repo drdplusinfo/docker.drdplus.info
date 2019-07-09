@@ -9,7 +9,7 @@ services:
     entrypoint:
       - sh
       - -c
-      - set -x && cd /var/www/blog && sudo -u www-data npm install && docker-php-ext-enable xdebug && /bin/bash /docker.sh
+      - set -x && cd /var/www/blog && sudo -u www-data npm install && docker-php-ext-enable xdebug && touch /tmp/xdebug.log && chmod 0777 /tmp/xdebug.log && /bin/bash /docker.sh
     labels:
       - "traefik.backend=drdplus.loc"
       - "traefik.frontend.rule=HostRegexp: drdplus.loc,{subdomain:(.+[.])+}drdplus.loc"
