@@ -171,7 +171,10 @@ http://rules.skeleton.drdplus.loc {
         index index.php
     }
     root /var/www/rules.skeleton
-    rewrite .* to /index.php
+    rewrite .* {
+        if {file} not favicon.ico
+        to {path} {path}/ /maintenance.html /index.php
+    }
     log /var/log/caddy
 }
 
