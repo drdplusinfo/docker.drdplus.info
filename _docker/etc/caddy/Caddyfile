@@ -171,6 +171,7 @@ http://rules.skeleton.drdplus.loc {
         index index.php
     }
     root /var/www/rules.skeleton
+    rewrite .* to /index.php
     log /var/log/caddy
 }
 
