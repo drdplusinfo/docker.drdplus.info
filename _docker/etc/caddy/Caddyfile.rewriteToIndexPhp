@@ -1,0 +1,4 @@
+rewrite {
+		if {file} not favicon.ico
+		to {path} {path}/ /maintenance.html /index.php
+}
