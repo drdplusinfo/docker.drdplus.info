@@ -1,121 +1,51 @@
 http://bestiar.drdplus.loc {
-    tls mail@jaroslavtyc.com
-    gzip
-    fastcgi / 127.0.0.1:9000 php {
-        ext   .php
-        split .php
-        index index.php
-    }
     root /var/www/bestiar
-    log /var/log/caddy
+    import CaddyfileLocalPhpProject
 }
 
 http://bestiar.ppj.drdplus.loc {
-    tls mail@jaroslavtyc.com
-    gzip
-    fastcgi / 127.0.0.1:9000 php {
-        ext   .php
-        split .php
-        index index.php
-    }
     root /var/www/bestiar.ppj
-    log /var/log/caddy
+    import CaddyfileLocalPhpProject
 }
 
 http://boj.drdplus.loc {
-    tls mail@jaroslavtyc.com
-    gzip
-    fastcgi / 127.0.0.1:9000 php {
-        ext   .php
-        split .php
-        index index.php
-    }
     root /var/www/boj
-    log /var/log/caddy
+    import CaddyfileLocalPhpProject
 }
 
 http://bojovnik.drdplus.loc {
-    tls mail@jaroslavtyc.com
-    gzip
-    fastcgi / 127.0.0.1:9000 php {
-        ext   .php
-        split .php
-        index index.php
-    }
     root /var/www/bojovnik
-    log /var/log/caddy
+    import CaddyfileLocalPhpProject
 }
 
 http://carodej.drdplus.loc {
-    tls mail@jaroslavtyc.com
-    gzip
-    fastcgi / 127.0.0.1:9000 php {
-        ext   .php
-        split .php
-        index index.php
-    }
     root /var/www/carodej
-    log /var/log/caddy
+    import CaddyfileLocalPhpProject
 }
 
 http://demon.theurg.drdplus.loc {
-    tls mail@jaroslavtyc.com
-    gzip
-    fastcgi / 127.0.0.1:9000 php {
-        ext   .php
-        split .php
-        index index.php
-    }
     root /var/www/demon.theurg
-    log /var/log/caddy
+    import CaddyfileLocalPhpProject
 }
 
 http://dobrodruzstvi.ppj.drdplus.loc {
-    tls mail@jaroslavtyc.com
-    gzip
-    fastcgi / 127.0.0.1:9000 php {
-        ext   .php
-        split .php
-        index index.php
-    }
     root /var/www/dobrodruzstvi.ppj
-    log /var/log/caddy
+    import CaddyfileLocalPhpProject
 }
 
 http://format.drdplus.drdplus.loc {
-    tls mail@jaroslavtyc.com
-    gzip
-    fastcgi / 127.0.0.1:9000 php {
-        ext   .php
-        split .php
-        index index.php
-    }
     root /var/www/format
-    log /var/log/caddy
+    import CaddyfileLocalPhpProject
 }
 
 http://formule.theurg.drdplus.loc {
-    tls mail@jaroslavtyc.com
-    gzip
-    fastcgi / 127.0.0.1:9000 php {
-        ext   .php
-        split .php
-        index index.php
-    }
     root /var/www/formule.theurg
-    log /var/log/caddy
+    import CaddyfileLocalPhpProject
 }
 
 http://hranicar.drdplus.loc {
-    tls mail@jaroslavtyc.com
-    gzip
-    fastcgi / 127.0.0.1:9000 php {
-        ext   .php
-        split .php
-        index index.php
-    }
     root /var/www/hranicar
-    log /var/log/caddy
+    import CaddyfileLocalPhpProject
 }
 
 http://drdplus.loc {
@@ -123,39 +53,18 @@ http://drdplus.loc {
 }
 
 http://www.drdplus.loc {
-    tls mail@jaroslavtyc.com
-    gzip
-    fastcgi / 127.0.0.1:9000 php {
-        ext   .php
-        split .php
-        index index.php
-    }
     root /var/www/index
-    log /var/log/caddy
+    import CaddyfileLocalPhpProject
 }
 
 http://inkubator.drdplus.loc {
-    tls mail@jaroslavtyc.com
-    gzip
-    fastcgi / 127.0.0.1:9000 php {
-        ext   .php
-        split .php
-        index index.php
-    }
     root /var/www/inkubator
-    log /var/log/caddy
+    import CaddyfileLocalPhpProject
 }
 
 http://kalkulator.skeleton.drdplus.loc {
-    tls mail@jaroslavtyc.com
-    gzip
-    fastcgi / 127.0.0.1:9000 php {
-        ext   .php
-        split .php
-        index index.php
-    }
     root /var/www/kalkulator.skeleton
-    log /var/log/caddy
+    import CaddyfileLocalPhpProject
 }
 
 http://rules.skeleton.loc {
@@ -163,168 +72,74 @@ http://rules.skeleton.loc {
 }
 
 http://rules.skeleton.drdplus.loc {
-    tls mail@jaroslavtyc.com
-    gzip
-    fastcgi / 127.0.0.1:9000 php {
-        ext   .php
-        split .php
-        index index.php
-    }
     root /var/www/rules.skeleton
-    import Caddyfile.rewriteToIndexPhp
-    log /var/log/caddy
+    import CaddyfileLocalPhpProject
 }
 
 http://knez.drdplus.loc {
-    tls mail@jaroslavtyc.com
-    gzip
-    fastcgi / 127.0.0.1:9000 php {
-        ext   .php
-        split .php
-        index index.php
-    }
     root /var/www/knez
-    log /var/log/caddy
+    import CaddyfileLocalPhpProject
 }
 
 http://niceni.drdplus.loc {
-    tls mail@jaroslavtyc.com
-    gzip
-    fastcgi / 127.0.0.1:9000 php {
-        ext   .php
-        split .php
-        index index.php
-    }
     root /var/www/niceni
-    log /var/log/caddy
+    import CaddyfileLocalPhpProject
 }
 
 http://pad.drdplus.loc {
-    tls mail@jaroslavtyc.com
-    gzip
-    fastcgi / 127.0.0.1:9000 php {
-        ext   .php
-        split .php
-        index index.php
-    }
     root /var/www/pad
-    log /var/log/caddy
+    import CaddyfileLocalPhpProject
 }
 
 http://pph.drdplus.loc {
-    tls mail@jaroslavtyc.com
-    gzip
-    fastcgi / 127.0.0.1:9000 php {
-        ext   .php
-        split .php
-        index index.php
-    }
     root /var/www/pph
-    log /var/log/caddy
+    import CaddyfileLocalPhpProject
 }
 
 http://ppj.drdplus.loc {
-    tls mail@jaroslavtyc.com
-    gzip
-    fastcgi / 127.0.0.1:9000 php {
-        ext   .php
-        split .php
-        index index.php
-    }
     root /var/www/ppj
-    log /var/log/caddy
+    import CaddyfileLocalPhpProject
 }
 
 http://pribeh.drdplus.loc {
-    tls mail@jaroslavtyc.com
-    gzip
-    fastcgi / 127.0.0.1:9000 php {
-        ext   .php
-        split .php
-        index index.php
-    }
     root /var/www/pribeh
-    log /var/log/caddy
+    import CaddyfileLocalPhpProject
 }
 
 http://pribeh.bestiar.drdplus.loc {
-    tls mail@jaroslavtyc.com
-    gzip
-    fastcgi / 127.0.0.1:9000 php {
-        ext   .php
-        split .php
-        index index.php
-    }
     root /var/www/pribeh.bestiar
-    log /var/log/caddy
+    import CaddyfileLocalPhpProject
 }
 
 http://theurg.drdplus.loc {
-    tls mail@jaroslavtyc.com
-    gzip
-    fastcgi / 127.0.0.1:9000 php {
-        ext   .php
-        split .php
-        index index.php
-    }
     root /var/www/theurg
-    log /var/log/caddy
+    import CaddyfileLocalPhpProject
 }
 
 http://utok.skeleton.drdplus.loc {
-    tls mail@jaroslavtyc.com
-    gzip
-    fastcgi / 127.0.0.1:9000 php {
-        ext   .php
-        split .php
-        index index.php
-    }
     root /var/www/utok.skeleton
-    log /var/log/caddy
+    import CaddyfileLocalPhpProject
 }
 
 http://zlodej.drdplus.loc {
-    tls mail@jaroslavtyc.com
-    gzip
-    fastcgi / 127.0.0.1:9000 php {
-        ext   .php
-        split .php
-        index index.php
-    }
     root /var/www/zlodej
-    log /var/log/caddy
+    import CaddyfileLocalPhpProject
 }
 
 http://blog.drdplus.loc {
-    tls mail@jaroslavtyc.com
-    gzip
     root /var/www/blog/output
-    log /var/log/caddy
+    import CaddyfileLocalPhpProject
     errors {
         404 404.html
     }
 }
 
 http://update.blog.drdplus.loc {
-    tls mail@jaroslavtyc.com
-    gzip
-    fastcgi / 127.0.0.1:9000 php {
-        ext   .php
-        split .php
-        index index.php
-    }
     root /var/www/blog
-    log /var/log/caddy
+    import CaddyfileLocalPhpProject
 }
 
 http://mdwiki.blog.drdplus.loc {
-    tls mail@jaroslavtyc.com
-    gzip
-    fastcgi / 127.0.0.1:9000 php {
-        ext   .php
-        split .php
-        index index.php
-    }
     root /var/www/mdwiki.blog
-    log /var/log/caddy
+    import CaddyfileLocalPhpProject
 }
