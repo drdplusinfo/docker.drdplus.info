@@ -138,8 +138,3 @@ http://update.blog.drdplus.loc {
     root /var/www/blog
     import CaddyfileLocalPhpProject
 }
-
-http://mdwiki.blog.drdplus.loc {
-    root /var/www/mdwiki.blog
-    import CaddyfileLocalPhpProject
-}
