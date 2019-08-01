@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
       gnupg \
       libyaml-0-2 libyaml-dev \
       git \
-      apt-transport-https  \
+      apt-transport-https \
       sudo \
     && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
 
