@@ -33,7 +33,7 @@ http://dobrodruzstvi.ppj.drdplus.loc {
     import CaddyfileLocalPhpProject
 }
 
-http://format.drdplus.drdplus.loc {
+http://format.drdplus.loc {
     root /var/www/format
     import CaddyfileLocalPhpProject
 }
@@ -136,5 +136,10 @@ http://blog.drdplus.loc {
 
 http://update.blog.drdplus.loc {
     root /var/www/blog
+    import CaddyfileLocalPhpProject
+}
+
+http://ocr.drdplus.loc {
+    root /var/www/ocr/public
     import CaddyfileLocalPhpProject
 }

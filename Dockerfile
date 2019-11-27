@@ -59,6 +59,6 @@ RUN chmod +x /docker.sh && chown -R www-data:www-data /home/www-data && chmod -R
 
 ENV PROJECT_ENVIRONMENT dev
 
-ENV XDEBUG_CONFIG "remote_host=10.10.0.1 remote_enable=1 idekey=PHPSTORM remote_log=/tmp/xdebug.log"
+ENV XDEBUG_CONFIG "remote_host=10.10.2.1 remote_enable=1 	idekey=PHPSTORM remote_log=/tmp/xdebug.log"
 
 ENTRYPOINT ["sh", "/docker.sh"]
