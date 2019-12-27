@@ -1,4 +1,4 @@
-FROM php:7.2-fpm-stretch
+FROM php:7.3-fpm-stretch
 
 ARG USER_ID=1000
 ARG GROUP_ID=1000
@@ -30,8 +30,8 @@ RUN curl https://getcaddy.com | bash -s personal hook.service,http.cache,http.cg
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN pecl channel-update pecl.php.net \
-    && pecl install yaml-2.0.0 \
-    && pecl install xdebug-2.6.1 \
+    && pecl install yaml-2.0.4 \
+    && pecl install xdebug-2.9.0 \
     && docker-php-ext-enable yaml \
     && docker-php-ext-install intl
 

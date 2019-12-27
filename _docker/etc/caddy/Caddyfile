@@ -9,7 +9,7 @@ http://bestiar.ppj.drdplus.loc {
 }
 
 http://boj.drdplus.loc {
-    root /var/www/boj
+    root /var/www/kalkulatory/boj
     import CaddyfileLocalPhpProject
 }
 
@@ -24,7 +24,7 @@ http://carodej.drdplus.loc {
 }
 
 http://demon.theurg.drdplus.loc {
-    root /var/www/demon.theurg
+    root /var/www/kalkulatory/demon.theurg
     import CaddyfileLocalPhpProject
 }
 
@@ -39,7 +39,7 @@ http://format.drdplus.loc {
 }
 
 http://formule.theurg.drdplus.loc {
-    root /var/www/formule.theurg
+    root /var/www/kalkulatory/formule.theurg
     import CaddyfileLocalPhpProject
 }
 
@@ -63,7 +63,7 @@ http://inkubator.drdplus.loc {
 }
 
 http://kalkulator.skeleton.drdplus.loc {
-    root /var/www/kalkulator.skeleton
+    root /var/www/kalkulatory/kalkulator.skeleton
     import CaddyfileLocalPhpProject
 }
 
@@ -82,12 +82,12 @@ http://knez.drdplus.loc {
 }
 
 http://niceni.drdplus.loc {
-    root /var/www/niceni
+    root /var/www/kalkulatory/niceni
     import CaddyfileLocalPhpProject
 }
 
 http://pad.drdplus.loc {
-    root /var/www/pad
+    root /var/www/kalkulatory/pad
     import CaddyfileLocalPhpProject
 }
 
@@ -117,7 +117,7 @@ http://theurg.drdplus.loc {
 }
 
 http://utok.skeleton.drdplus.loc {
-    root /var/www/utok.skeleton
+    root /var/www/kalkulatory/utok.skeleton
     import CaddyfileLocalPhpProject
 }
 
