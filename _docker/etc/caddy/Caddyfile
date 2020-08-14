@@ -130,8 +130,3 @@ http://ocr.drdplus.loc {
     root /var/www/ocr/public
     import CaddyfileLocalPhpProject
 }
-
-http://asterion.skeleton.loc {
-    root /var/www/asterion.skeleton
-    import CaddyfileLocalPhpProject
-}

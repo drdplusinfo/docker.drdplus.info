@@ -26,8 +26,8 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 RUN pecl channel-update pecl.php.net \
     && pecl install yaml-2.0.4 \
-    && pecl install xdebug-2.9.0 \
     && docker-php-ext-enable yaml \
+    && pecl install xdebug-2.9.0 \
     && docker-php-ext-install intl
 
 # re-build www-data user with same user ID and group ID as a current host user (you)
@@ -51,8 +51,6 @@ RUN echo 'alias ll="ls -al"' >> ~/.bashrc \
 COPY ./_docker /
 
 RUN chmod +x /docker.sh && chown -R www-data:www-data /home/www-data && chmod -R 0600 /home/www-data/.ssh/*
-
-ENV PROJECT_ENVIRONMENT dev
 
 ENV XDEBUG_CONFIG "remote_host=10.10.2.1 remote_enable=1 	idekey=PHPSTORM remote_log=/tmp/xdebug.log"
 
