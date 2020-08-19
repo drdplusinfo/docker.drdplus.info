@@ -4,6 +4,7 @@ services:
     build: .
     environment:
       PHP_IDE_CONFIG: "serverName=drdplus.loc"
+      PROJECT_ENVIRONMENT: "dev"
     volumes:
       - ./www:/var/www:delegated
     entrypoint:
