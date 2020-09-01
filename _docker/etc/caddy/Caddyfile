@@ -1,132 +1,132 @@
 http://bestiar.drdplus.loc {
-    root /var/www/bestiar
+    root * /var/www/bestiar
     import CaddyfileLocalPhpProject
 }
 
 http://bestiar.ppj.drdplus.loc {
-    root /var/www/bestiar.ppj
+    root * /var/www/bestiar.ppj
     import CaddyfileLocalPhpProject
 }
 
 http://boj.drdplus.loc {
-    root /var/www/kalkulatory/boj
+    root * /var/www/kalkulatory/boj
     import CaddyfileLocalPhpProject
 }
 
 http://bojovnik.drdplus.loc {
-    root /var/www/bojovnik
+    root * /var/www/bojovnik
     import CaddyfileLocalPhpProject
 }
 
 http://carodej.drdplus.loc {
-    root /var/www/carodej
+    root * /var/www/carodej
     import CaddyfileLocalPhpProject
 }
 
 http://demon.theurg.drdplus.loc {
-    root /var/www/kalkulatory/demon.theurg
+    root * /var/www/kalkulatory/demon.theurg
     import CaddyfileLocalPhpProject
 }
 
 http://dobrodruzstvi.ppj.drdplus.loc {
-    root /var/www/dobrodruzstvi.ppj
+    root * /var/www/dobrodruzstvi.ppj
     import CaddyfileLocalPhpProject
 }
 
 http://format.drdplus.loc {
-    root /var/www/format
+    root * /var/www/format
     import CaddyfileLocalPhpProject
 }
 
 http://formule.theurg.drdplus.loc {
-    root /var/www/kalkulatory/formule.theurg
+    root * /var/www/kalkulatory/formule.theurg
     import CaddyfileLocalPhpProject
 }
 
 http://hranicar.drdplus.loc {
-    root /var/www/hranicar
+    root * /var/www/hranicar
     import CaddyfileLocalPhpProject
 }
 
 http://drdplus.loc {
-    redir http://www.drdplus.loc
+    redir http://www.drdplus.loc{uri}
 }
 
 http://www.drdplus.loc {
-    root /var/www/index
+    root * /var/www/index
     import CaddyfileLocalPhpProject
 }
 
 http://inkubator.drdplus.loc {
-    root /var/www/inkubator
+    root * /var/www/inkubator
     import CaddyfileLocalPhpProject
 }
 
 http://kalkulator.skeleton.drdplus.loc {
-    root /var/www/kalkulatory/kalkulator.skeleton
+    root * /var/www/kalkulatory/kalkulator.skeleton
     import CaddyfileLocalPhpProject
 }
 
 http://rules.skeleton.loc {
-    redir http://rules.skeleton.drdplus.loc
+    redir http://rules.skeleton.drdplus.loc{uri}
 }
 
 http://rules.skeleton.drdplus.loc {
-    root /var/www/rules.skeleton
+    root * /var/www/rules.skeleton
     import CaddyfileLocalPhpProject
 }
 
 http://knez.drdplus.loc {
-    root /var/www/knez
+    root * /var/www/knez
     import CaddyfileLocalPhpProject
 }
 
 http://niceni.drdplus.loc {
-    root /var/www/kalkulatory/niceni
+    root * /var/www/kalkulatory/niceni
     import CaddyfileLocalPhpProject
 }
 
 http://pad.drdplus.loc {
-    root /var/www/kalkulatory/pad
+    root * /var/www/kalkulatory/pad
     import CaddyfileLocalPhpProject
 }
 
 http://pph.drdplus.loc {
-    root /var/www/pph
+    root * /var/www/pph
     import CaddyfileLocalPhpProject
 }
 
 http://ppj.drdplus.loc {
-    root /var/www/ppj
+    root * /var/www/ppj
     import CaddyfileLocalPhpProject
 }
 
 http://pribeh.drdplus.loc {
-    root /var/www/pribeh
+    root * /var/www/pribeh
     import CaddyfileLocalPhpProject
 }
 
 http://pribeh.bestiar.drdplus.loc {
-    root /var/www/pribeh.bestiar
+    root * /var/www/pribeh.bestiar
     import CaddyfileLocalPhpProject
 }
 
 http://theurg.drdplus.loc {
-    root /var/www/theurg
+    root * /var/www/theurg
     import CaddyfileLocalPhpProject
 }
 
 http://utok.skeleton.drdplus.loc {
-    root /var/www/kalkulatory/utok.skeleton
+    root * /var/www/kalkulatory/utok.skeleton
     import CaddyfileLocalPhpProject
 }
 
 http://zlodej.drdplus.loc {
-    root /var/www/zlodej
+    root * /var/www/zlodej
     import CaddyfileLocalPhpProject
 }
 
 http://ocr.drdplus.loc {
-    root /var/www/ocr/public
+    root * /var/www/ocr/public
     import CaddyfileLocalPhpProject
 }

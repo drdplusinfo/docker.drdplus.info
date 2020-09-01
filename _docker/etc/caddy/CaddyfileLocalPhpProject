@@ -1,12 +1,10 @@
     tls mail@jaroslavtyc.com
-    gzip
-    fastcgi / 127.0.0.1:9000 php {
-        ext   .php
-        split .php
-        index index.php
+    encode zstd gzip
+    php_fastcgi 127.0.0.1:9000
+    # try_files {path} {path}/ /index.php
+    @static {
+    		path_regexp static \.(js|css|ico|pdf|jpg|png|html|woff|woff2)
+    		not path_regexp forbidden \.json
+    		not path /vendor
     }
-    rewrite {
-    		if {file} not favicon.ico
-    		to {path} {path}/ /maintenance.html /index.php /index.html
-    }
-    log /var/log/caddy
+    file_server @static

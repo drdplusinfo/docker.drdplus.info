@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -x
+
 nohup php-fpm &
 
-/usr/local/bin/caddy -conf /etc/caddy/Caddyfile
+/usr/bin/caddy run --config /etc/caddy/Caddyfile --watch
