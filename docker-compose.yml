@@ -5,6 +5,7 @@ services:
     environment:
       PHP_IDE_CONFIG: "serverName=drdplus.loc"
       PROJECT_ENVIRONMENT: "dev"
+      XDEBUG_CONFIG: "remote_host=172.17.0.1 remote_enable=1 idekey=PHPSTORM remote_log=/tmp/xdebug.log"
     volumes:
       - ./www:/var/www:delegated
     entrypoint:
