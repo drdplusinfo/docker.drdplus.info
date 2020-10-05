@@ -130,3 +130,8 @@ http://ocr.drdplus.loc {
     root * /var/www/ocr/public
     import CaddyfileLocalPhpProject
 }
+
+http://zombie-moudre-sovy.drdplus.loc {
+    root * /var/www/zombie-moudre-sovy
+    import CaddyfileLocalPhpProject
+}
