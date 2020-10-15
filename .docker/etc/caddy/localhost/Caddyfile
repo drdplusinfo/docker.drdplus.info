@@ -131,7 +131,16 @@ http://ocr.drdplus.loc {
     import CaddyfileLocalPhpProject
 }
 
-http://zombie-moudre-sovy.drdplus.loc {
-    root * /var/www/zombie-moudre-sovy
+http://o-norikovi.drdplus.loc {
+    redir http://onorikovi.drdplus.loc{uri}
+}
+
+http://onorikovi.drdplus.loc {
+    root * /var/www/o-norikovi
+    import CaddyfileLocalPhpProject
+}
+
+http:// { # default
+    root * /var/www/o-norikovi
     import CaddyfileLocalPhpProject
 }

@@ -16,7 +16,7 @@ services:
       - set -x && docker-php-ext-enable xdebug && touch /tmp/xdebug.log && chmod 0777 /tmp/xdebug.log && /bin/bash /entrypoint.sh
     labels:
       - "traefik.backend=drdplus"
-      - "traefik.frontend.rule=HostRegexp: drdplus.loc,{subdomain:(.+[.])+}drdplus.loc,{catchall:.*}"
+      - "traefik.frontend.rule=HostRegexp: drdplus.loc,{subdomain:(.+[.])+}drdplus.loc"
       - "traefik.docker.network=docker-www"
     networks:
       - default
