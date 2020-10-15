@@ -18,6 +18,7 @@ services:
       - "traefik.backend=drdplus"
       - "traefik.frontend.rule=HostRegexp: drdplus.loc,{subdomain:(.+[.])+}drdplus.loc"
       - "traefik.docker.network=docker-www"
+      - "traefik.port=80"
     networks:
       - default
       - proxy
