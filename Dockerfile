@@ -17,6 +17,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
       git \
       apt-transport-https \
       sudo \
+      procps \
     && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
 
 # Fix debconf warnings upon build
