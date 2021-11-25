@@ -33,7 +33,7 @@ RUN pecl channel-update pecl.php.net \
 RUN if getent passwd www-data ; then userdel -f www-data; fi && \
 		if getent group www-data ; then groupdel www-data; fi && \
 		groupadd --gid ${GROUP_ID} www-data && \
-		useradd www-data --no-log-init --gid ${USER_ID} --groups www-data --home-dir /home/www-data --shell /bin/bash && \
+		useradd www-data --no-log-init --gid ${GROUP_ID} --uid ${USER_ID} --groups www-data --home-dir /home/www-data --shell /bin/bash && \
 		mkdir -p /var/www && \
 		chown -R www-data:www-data /var/www && \
 		mkdir -p /home/www-data && \
