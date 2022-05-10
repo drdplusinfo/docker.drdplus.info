@@ -1,3 +1,8 @@
+# UPDATE
+# docker pull php:7.4-fpm && docker build --no-cache --tag jaroslavtyc/drdplus.info:latest . && docker push jaroslavtyc/drdplus.info:latest
+# REBUILD (same as above but without --no-cache)
+# docker pull php:7.4-fpm && docker build --tag jaroslavtyc/drdplus.info:latest . && docker push jaroslavtyc/drdplus.info:latest
+
 FROM php:7.4-fpm
 
 ARG USER_ID=1000
