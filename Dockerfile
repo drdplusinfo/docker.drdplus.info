@@ -15,6 +15,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
       zlib1g-dev \
       libaio-dev \
       libxml2-dev \
+      libzip-dev \
       librabbitmq-dev \
       curl \
       gnupg \
@@ -29,10 +30,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN pecl channel-update pecl.php.net \
-    && pecl install yaml-2.0.4 \
+    && pecl install yaml \
     && docker-php-ext-enable yaml \
-    && pecl install xdebug-2.9.0 \
-    && docker-php-ext-install intl
+    && pecl install xdebug \
+    && docker-php-ext-install intl \
+    && docker-php-ext-install zip
 
 # re-build www-data user with same user ID and group ID as a current host user (you)
 RUN if getent passwd www-data ; then userdel -f www-data; fi && \
@@ -54,6 +56,11 @@ RUN echo 'alias ll="ls -al"' >> ~/.bashrc \
 RUN echo "deb [trusted=yes] https://apt.fury.io/caddy/ /" > /etc/apt/sources.list.d/caddy-fury.list \
 		&& apt-get update && apt-get install caddy && caddy list-modules \
 		&& touch /var/log/caddy && chown caddy /var/log/caddy
+
+COPY .docker/php/conf.d/php.ini /usr/local/etc/php/php.ini
+COPY .docker/php/conf.d/xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
+COPY .docker/.bash_aliases /root/.bash_aliases
+COPY .docker/.bash_aliases /home/www-data/.bash_aliases
 
 COPY .docker /
 
